@@ -4,7 +4,7 @@
     <h1 align="center">Micropython OTA Updates</h1>
   <h3 align="center">Keep your remote ESP32 devices in sync with a github repo.</h3>
   <h2 align="center">Pulls entire github repository onto a micropython board</h2>
-  <p align="center"> Over The Air, with one command: ugit.pull_all()</p>
+  <p align="center">Over The Air, with one command: ugit.pull_all()</p>
 </div>
 
 
@@ -12,12 +12,12 @@
 
 This is meant to clone an entire micropython repository to an internet enable micropython microcontroller. You can use it to periodically update the entire ESP32 micropython file structure to match an open github repository.
 
-If there are files that you want to be left intact on the ESP32 regardless of the changes done to the github repository. Just add the file name in ignore_files array. Located on line 27 of ugit.py.
+If there are files that you want to be left intact on the ESP32 regardless of the changes done to the github repository, just add the file names in ignore_files array (located on line 27 of ugit.py).
 
 ugit functions:
 * ugit will update the internal file structure of an ESP32 with a github repository
 * Files Folders and file Deletions are updated to the board
-* Specify which repository, ingore files, and user inside of ugit.py
+* Specify which repository, ignore files and user inside of ugit.py
 
 <img src="images/ugit_screenshot.png" alt="Logo" width="600" height="600">
 
@@ -40,7 +40,7 @@ Download `ugit.py` to your ESP32 micropython board to get started.
 
 import ugit
 
-ugit.backup() # good idea to backup your files!
+ugit.backup() # good idea to back up your files!
 
 ugit.pull_all()
 ```
@@ -49,7 +49,7 @@ ugit.pull_all()
 Simply put: copy ugit.py onto the micropython board.
 
 1. Copy ugit.py onto your micropython board
-2. modify ugit_config with the user,repository,ssid, and password
+2. modify ugit_config with the user, repository, ssid and password
 4. run the ugit.pull_all()
 
 <img src="images/ugit_ugit-divider.png" alt="Logo"  height="20">
@@ -101,12 +101,9 @@ ugit.pull_all()
 
 See the [open issues](https://github.com/turfptax/ugit/issues) for a list of proposed features (and known issues).
 
-As we test and update the code to work in a variety of scenarious we wish to have the following features implemented as soon as possible.
+As we test and update the code to work in a variety of scenarios, we wish to have the following features implemented as soon as possible.
 
 - Rollback function
 - SHA1 internal hash storage - Currently ugit pulls all files
 - ugit.py update function - updates the ugit.py code from this repository (currently in dev branch)
 - Simplified Logging
-
-
-
